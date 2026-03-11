@@ -12,6 +12,8 @@ import mj.mysqlagent.sender.GzipNdjsonSender;
 import mj.mysqlagent.slowlog.SlowLogParser;
 import mj.mysqlagent.slowlog.SlowLogTailer;
 import mj.mysqlagent.util.SleepUtil;
+import mj.oskspring.controller.HelloController;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.nio.file.Path;
@@ -20,10 +22,16 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicLong;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class AgentMain {
 
     public static void main(String[] args) throws Exception {
+    	
+    	log.debug("AgentMain started");
+    			
+    	
         Path configFile = args != null && args.length > 0
                 ? Path.of(args[0])
                 : Path.of("agent.yaml");
