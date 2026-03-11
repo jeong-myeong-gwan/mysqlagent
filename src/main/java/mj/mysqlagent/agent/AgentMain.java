@@ -12,7 +12,6 @@ import mj.mysqlagent.sender.GzipNdjsonSender;
 import mj.mysqlagent.slowlog.SlowLogParser;
 import mj.mysqlagent.slowlog.SlowLogTailer;
 import mj.mysqlagent.util.SleepUtil;
-import mj.oskspring.controller.HelloController;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
